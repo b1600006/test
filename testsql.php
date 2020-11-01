@@ -4,11 +4,12 @@
 	$password = 'thanhan1810@';
 	$dbname = 'demo';
 
-	$con = new mysqli($servername,$username,$password);
+	$con = mysqli($servername,$username,$password,$dbname);
 
-	if ($conn->connect_error) {
-    		die("Connection failed: " . $con->connect_error);
-	} 
+	if (!mysqli()){
+		echo "connect error";
+		exit();
+	}
 
 	echo "connect succsess!";
 ?>
